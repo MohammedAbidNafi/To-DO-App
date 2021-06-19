@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ds">
+
+        <attr name="white" format="color"/>
+        <attr name="darkPrimary" format="color"/>
+        <attr name="mainText" format="color"/>
+        <attr name="altText" format="color"/>
+        <attr name="mainBackground" format="color"/>
+        <attr name="cancelred" format="color"/>
+        <attr name="mainGreen" format="color"/>
+
+
+    </declare-styleable>
+
+
+</resources>

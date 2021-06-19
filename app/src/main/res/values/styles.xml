@@ -1,0 +1,48 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="white">@color/white</item>
+        <item name="darkPrimary">@color/darkPrimary</item>
+
+        <item name="mainText">@color/mainText</item>
+        <item name="altText">@color/altText</item>
+
+        <item name="mainBackground">@color/mainBackground</item>
+
+        <item name="cancelred">@color/cancelred</item>
+        <item name="mainGreen">@color/mainGreen</item>
+        <item name="android:windowAnimationStyle">@style/DarkAnimationTransition</item>
+    </style>
+
+    <style name="Dark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorPrimaryDark">#1C1F27</item>
+        <item name="colorAccent">#FFFFFF</item>
+
+        <item name="white">#FFFFFF</item>
+        <item name="darkPrimary">#1C1F27</item>
+
+        <item name="mainText">#FFFFFF</item>
+        <item name="altText">#A9ABB3</item>
+
+        <item name="mainBackground">#2D323F</item>
+
+        <item name="cancelred">#ea5455</item>
+        <item name="mainGreen">#3DDC84</item>
+        <item name="android:windowAnimationStyle">@style/DarkAnimationTransition</item>
+    </style>
+    
+    <style name="DarkAnimationTransition">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+
+</resources>
