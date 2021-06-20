@@ -25,7 +25,7 @@ Current Features
 
 Planned Features
 ---
-* <s>Task notifications</s>
+* Task notifications
 * Ability to add Time
 * Multiple Task Lists
 * <s>Task Priority</s>
