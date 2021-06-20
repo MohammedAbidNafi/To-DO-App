@@ -1,8 +1,9 @@
 package com.margsapp.todo
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.margsapp.todo.edittask.EditFragment
 import com.margsapp.todo.listtasks.ListFragment
@@ -62,6 +63,15 @@ class MainActivity : AppCompatActivity(), ListFragment.Callbacks {
             .commit()
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+        val homeIntent = Intent(Intent.ACTION_MAIN)
+        homeIntent.addCategory(Intent.CATEGORY_HOME)
+        homeIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+        startActivity(homeIntent)
+
+    }
 
     override fun onResume() {
         super.onResume()

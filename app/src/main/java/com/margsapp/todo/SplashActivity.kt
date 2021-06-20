@@ -1,4 +1,4 @@
-package com.margsapp.todo.settings
+package com.margsapp.todo
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,8 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatDelegate
-import com.margsapp.todo.MainActivity
-import com.margsapp.todo.R
+import com.margsapp.todo.settings.SettingsActivity
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,10 +34,6 @@ class SplashActivity : AppCompatActivity() {
 
         }
 
-        window.setFlags(
-            WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN
-        )
 
         // we used the postDelayed(Runnable, time) method
         // to send a message with a delayed time.
