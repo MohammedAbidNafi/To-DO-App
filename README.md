@@ -18,7 +18,7 @@ Current Features
 * Overview of all your tasks at a glance
 * Set task due dates 
 * Beautiful Material design and interface
-* Dark Mode (Toggle Coming soon)
+* Dark Mode <s>(Toggle Coming soon)</s>
 * Works offline, all data stored on your device
 * Your Privacy is secured
 
@@ -29,7 +29,7 @@ Planned Features
 * Multiple Task Lists
 * Task Priority
 * Task Tags
-* Dark Mode Toggle/Settings Menu
+* <s>Dark Mode Toggle/Settings Menu</s>
 * Overview customization
 * Localization
 * Themes - maybe
