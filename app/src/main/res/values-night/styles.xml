@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorPrimaryDark">#1C1F27</item>
+        <item name="colorAccent">#FFFFFF</item>
+
+        <item name="white">#FFFFFF</item>
+        <item name="darkPrimary">#1C1F27</item>
+
+        <item name="mainText">#FFFFFF</item>
+        <item name="altText">#A9ABB3</item>
+
+        <item name="mainBackground">#2D323F</item>
+
+        <item name="cancelred">#ea5455</item>
+        <item name="mainGreen">#3DDC84</item>
+        <item name="android:windowAnimationStyle">@style/DarkAnimationTransition</item>
+    </style>
+
+    <style name="DarkAnimationTransition">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+</resources>

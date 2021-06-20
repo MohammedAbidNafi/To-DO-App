@@ -1,20 +1,94 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/mainBackground">
 
+    <TextView
+        android:id="@+id/settings_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="@string/settings"
+        android:transitionName="text"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:paddingLeft="20dp"
+        android:fontFamily="@font/rubik_medium"
+        android:textColor="@color/mainText"
+        android:drawableStart="@drawable/ic_settings"
+        android:drawableTint="@color/mainText"
+        android:drawablePadding="10dp"
+        android:clickable="true"
+        android:background="@color/mainBackground"
+        tools:ignore="RtlCompat" />
 
-    <Switch
-        android:id="@+id/DarkMode"
-        android:layout_width="385dp"
-        android:layout_height="75dp"
-        android:text="@string/dark_mode"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.068"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/theme_card"
+        android:layout_marginTop="25dp"
+        app:cardElevation="25dp"
+        android:layout_below="@id/settings_button"
+
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/mainBackground"
+            >
+            <ImageView
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:id="@+id/translate_img"
+                android:layout_marginTop="20dp"
+
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_baseline_brightness_4_24"
+                />
+
+            <TextView
+                android:id="@+id/theme_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8sp"
+                android:layout_toEndOf="@+id/translate_img"
+                android:text="@string/Choose_Theme"
+                android:textColor="@color/mainText"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/theme_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/theme_title"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/translate_img"
+                android:textColor="@color/mainText"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_create_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/translate_img"
+
+                android:layout_marginTop="15sp"
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

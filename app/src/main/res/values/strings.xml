@@ -25,6 +25,7 @@
 
     <string name="overview">You have %s tasks to finish.</string>
     <string name="dark_mode">Dark Mode</string>
+    <string name="Choose_Theme">Choose Theme</string>
 
 
 </resources>

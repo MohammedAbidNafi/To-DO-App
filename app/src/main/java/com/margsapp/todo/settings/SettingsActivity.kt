@@ -1,67 +1,147 @@
-package com.margs.todo.settings;
+package com.margsapp.todo.settings
 
-import android.annotation.SuppressLint;
-import android.content.Intent;
-import android.os.Bundle;
-import android.widget.CompoundButton;
-import android.widget.Switch;
+import android.app.ActivityOptions
+import android.content.DialogInterface
+import android.content.Intent
+import android.os.Bundle
+import android.util.Pair
+import android.view.View
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
+import com.margsapp.todo.MainActivity
+import com.margsapp.todo.R
+import kotlinx.android.synthetic.main.settings_activity.*
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
+class SettingsActivity : AppCompatActivity() {
 
-import com.margs.todo.R;
-import com.margs.todo.SharedPref;
+    private var theme_id: Int = 0
 
-public class SettingsActivity extends AppCompatActivity {
-
-    @SuppressLint("UseSwitchCompatOrMaterialCode")
-    public Switch darkmodeSwitch;
-
-    SharedPref sharedPref;
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.settings_activity)
 
 
+        val sharedPreferences = getSharedPreferences("themeID", 0)
 
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        val Theme = sharedPreferences.getInt(SettingsActivity.THEME, 0)
 
-        sharedPref = new SharedPref(this);
+        if (Theme == 2) {
 
-        if (sharedPref.loadNightModeState())
-        {
-            setTheme(R.style.Dark);
-        }else {
-            setTheme(R.style.AppTheme);
+
+            theme_txt.setText("Light")
+
         }
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.settings_activity);
+        if (Theme == 1) {
 
-        darkmodeSwitch= findViewById(R.id.DarkMode);
-        if(sharedPref.loadNightModeState())
-        {
-            darkmodeSwitch.setChecked(true);
+
+            theme_txt.setText("Dark")
+
+        }
+        if (Theme == 0) {
+
+
+            theme_txt.setText("Default")
+
         }
 
-        darkmodeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
-                if(isChecked){
-                    sharedPref.setNightModeState(true);
-                    restartApp();
-                }
 
-                else {
-                    sharedPref.setNightModeState(false);
-                    restartApp();
-                }
-            }
-        });
+        theme_card.setOnClickListener {
+            showDialog()
+        }
+
+
 
     }
 
-    public void restartApp(){
-        Intent i = new Intent(getApplicationContext(), SettingsActivity.class);
-        startActivity(i);
-        finish();
+
+    private fun showDialog() {
+        val preferences = getSharedPreferences("themeID", MODE_PRIVATE)
+        theme_id = preferences.getInt(THEME, 0)
+
+        val themes = arrayOf("Default", "Dark", "Light")
+
+        val dialog = AlertDialog.Builder(this)
+        dialog.setTitle(resources.getString(R.string.Choose_Theme))
+
+
+        dialog.setSingleChoiceItems(themes, theme_id) { dialog1: DialogInterface, i: Int ->
+            if (i == 0) {
+                setDefaultTheme()
+
+                recreate()
+            } else if (i == 1) {
+                setDark()
+
+                recreate()
+            } else if (i == 2) {
+                setLight()
+
+                recreate()
+            }
+            dialog1.dismiss()
+        }
+
+        val alertDialog = dialog.create()
+        alertDialog.show()
+    }
+
+
+
+
+
+    private fun setDefaultTheme() {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+        val sharedPreferences = getSharedPreferences("themeID", 0)
+        val editor = sharedPreferences.edit()
+        editor.putInt(THEME, 0)
+        editor.apply()
+
+
+    }
+
+    private fun setDark() {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        val sharedPreferences = getSharedPreferences("themeID", 0)
+        val editor = sharedPreferences.edit()
+        editor.putInt(THEME, 1)
+        editor.apply()
+
+
+    }
+
+    private fun setLight() {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        val sharedPreferences = getSharedPreferences("themeID", 0)
+        val editor = sharedPreferences.edit()
+        editor.putInt(THEME, 2)
+        editor.apply()
+
+
+
+    }
+
+
+
+    private fun restartApp() {
+        val i = Intent(applicationContext, SettingsActivity::class.java)
+        startActivity(i)
+        finish()
+    }
+
+    override fun onBackPressed() {
+
+        val intent = Intent(this, MainActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT)
+        val pairs = listOf<Pair<View, String>>(
+        Pair(settings_button, "text")
+        )
+        val options = ActivityOptions.makeSceneTransitionAnimation(this, pairs[0])
+        startActivity(intent, options.toBundle())
+        finish()
+    }
+
+    companion object {
+        const val THEME = "0"
     }
 }

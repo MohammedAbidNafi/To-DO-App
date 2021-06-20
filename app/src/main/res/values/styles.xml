@@ -18,6 +18,7 @@
         <item name="cancelred">@color/cancelred</item>
         <item name="mainGreen">@color/mainGreen</item>
         <item name="android:windowAnimationStyle">@style/DarkAnimationTransition</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
     </style>
 
     <style name="Dark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
