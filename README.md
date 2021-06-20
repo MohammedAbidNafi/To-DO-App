@@ -29,6 +29,7 @@ Planned Features
 * Ability to add Time
 * Multiple Task Lists
 * <s>Task Priority</s>
+* <s>Show priority in Home</s>
 * Task Tags
 * <s>Dark Mode Toggle/Settings Menu</s>
 * Overview customization
