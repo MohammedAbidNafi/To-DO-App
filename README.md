@@ -1,11 +1,8 @@
-# Checked Android App (In Beta)
+# To-Do Android App
 ### A Minimalistic Android Todo app written in Kotlin
 #### Kotlin, Room Database and Repository, Material Components, MVVM
 
-<a href='https://play.google.com/store/apps/details?id=com.margsapp.checked&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-            <img width="200" height="100%" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
-</a>
- 
+
 Screenshots
 ---
 <p align="center">
@@ -23,6 +20,7 @@ Current Features
 * Beautiful Material design and interface
 * Dark Mode (Toggle Coming soon)
 * Works offline, all data stored on your device
+* Your Privacy is secured
 
 
 Planned Features
@@ -38,11 +36,22 @@ Planned Features
 
 Known Issues
 ---
-To report issues, please email me at peterdpongdev@gmail.com or add an issue to this github page.
-* Edit task animation on close (Fixed in Beta 0.2)
+None
 
+## Ways to Contribute 
+1. Create an issue to discuss about your idea.(https://github.com/MohammedAbidNafi/To-DO-App/issues)
+2. Suggest any feature or suggestion.(https://github.com/MohammedAbidNafi/To-DO-App/issues)
+3. Have a discussion in (https://github.com/MohammedAbidNafi/To-DO-App/discussions)
+
+### To make changes to code
+
+1. Fork it (https://github.com/MohammedAbidNafi/To-DO-App/fork)
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
 
 Help with Translating
 ---
-Email me at peterdpongdev@gmail.com to help with translating the app.
+Email me at margsglobal@gmail.com to help with translating the app.
 
