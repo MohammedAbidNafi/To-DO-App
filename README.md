@@ -36,7 +36,7 @@ Planned Features
 
 Known Issues
 ---
-None
+* Animation Glitching when coming back
 
 ## Ways to Contribute 
 1. Create an issue to discuss about your idea.(https://github.com/MohammedAbidNafi/To-DO-App/issues)
