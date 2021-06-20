@@ -20,6 +20,7 @@ Current Features
 * Beautiful Material design and interface
 * Dark Mode (Toggle Coming soon)
 * Works offline, all data stored on your device
+* Your Privacy is secured
 
 
 Planned Features
