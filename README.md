@@ -39,6 +39,7 @@ Planned Features
 Known Issues
 ---
 * Animation Glitching when coming back
+* Not able to change priority while editing task
 
 ## Ways to Contribute 
 1. Create an issue to discuss about your idea.(https://github.com/MohammedAbidNafi/To-DO-App/issues)
