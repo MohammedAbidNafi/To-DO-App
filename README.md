@@ -38,6 +38,19 @@ Known Issues
 ---
 None
 
+## Ways to Contribute 
+1. Create an issue to discuss about your idea.(https://github.com/MohammedAbidNafi/To-DO-App/issues)
+2. Suggest any feature or suggestion.(https://github.com/MohammedAbidNafi/To-DO-App/issues)
+3. Have a discussion in (https://github.com/MohammedAbidNafi/To-DO-App/discussions)
+
+### To make changes to code
+
+1. Fork it (https://github.com/MohammedAbidNafi/To-DO-App/fork)
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
+
 Help with Translating
 ---
 Email me at margsglobal@gmail.com to help with translating the app.
